@@ -11,5 +11,16 @@ const server = http.createServer((request, response) => {
             response.end();
         });
     }
+    else {
+        fs.readFile(`${__dirname}/front${request.url}`, function (err,data) {
+            if (err) {
+                response.writeHead(404);
+                response.end(JSON.stringify(err));
+                return;
+            }
+            response.writeHead(200);
+            response.end(data);
+        });
+    }
 
 }).listen(PORT);
