@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/payalpatra/Bank-Marketing-Site/issues"
   },
-  "homepage": "https://github.com/payalpatra/Bank-Marketing-Site#readme"
+  "homepage": "https://github.com/payalpatra/Bank-Marketing-Site#readme",
+  "dependencies": {
+    "mongodb": "^3.6.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
 }
