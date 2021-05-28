@@ -67,7 +67,7 @@ document.querySelector('.logo').addEventListener('click', () => {
 });
 
 document.querySelector('#login-btn').addEventListener('click', () => {
-    fetch(`${window.location.origin}/api/singin`, {method: "post",
+    fetch(`${window.location.origin}:80/api/singin`, {method: "post",
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
@@ -93,7 +93,7 @@ document.querySelector('#login-btn').addEventListener('click', () => {
 })
 
 document.querySelector('#registration-btn').addEventListener('click', () => {
-    fetch(`${window.location.origin}/api/singup`, {method: "post",
+    fetch(`${window.location.origin}:80/api/singup`, {method: "post",
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
