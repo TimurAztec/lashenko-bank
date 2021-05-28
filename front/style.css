@@ -22,6 +22,7 @@ body table {
 
 .logo {
     float: left;
+    cursor: pointer;
 }
 
 .auth {
@@ -53,6 +54,7 @@ body table {
     list-style-type: none;
     padding: 12px 0px 0px 12px;
     float: top;
+    cursor: pointer;
 }
 
 .navbar li a:hover {
@@ -60,9 +62,11 @@ body table {
 }
 
 .content {
-    background-color: cornsilk;
-    padding: 12px;
-    margin-left: 24px;
+    width: 100%;
+}
+
+.content iframe {
+    width: 100%; height: 800px; border: 0;
 }
 
 .footer {
