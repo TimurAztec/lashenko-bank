@@ -6,13 +6,13 @@ const API = require('./api');
 const server = http.createServer((request, response) => {
     response.setHeader('Access-Control-Allow-Origin', '*');
     response.setHeader('Access-Control-Allow-Headers', '*');
+    console.log('Server started on: ' + PORT);
     if (request.url === '/') {
         fs.readFile('front/index.html', (err, data) => {
             response.write(data);
             response.end();
         });
     } else if (request.url.split('/')[1] === 'api') {
-        console.log(request.headers?.cookie);
         API(request, response);
     } else {
         fs.readFile(`${__dirname}/front${request.url}`, function (err,data) {
@@ -25,5 +25,4 @@ const server = http.createServer((request, response) => {
             response.end(data);
         });
     }
-
 }).listen(PORT);
