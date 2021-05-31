@@ -93,7 +93,7 @@ document.querySelector('#login-btn').addEventListener('click', () => {
 })
 
 document.querySelector('#registration-btn').addEventListener('click', () => {
-    fetch(`${apiurl}/api/signin`, {method: "post",
+    fetch(`${apiurl}/api/signup`, {method: "post",
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
