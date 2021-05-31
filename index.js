@@ -6,7 +6,6 @@ const API = require('./api');
 const server = http.createServer((request, response) => {
     response.setHeader('Access-Control-Allow-Origin', '*');
     response.setHeader('Access-Control-Allow-Headers', '*');
-    console.log('Server started on: ' + PORT);
     if (request.url === '/') {
         fs.readFile('front/index.html', (err, data) => {
             response.write(data);
@@ -26,3 +25,5 @@ const server = http.createServer((request, response) => {
         });
     }
 }).listen(PORT);
+
+console.log('Server started on: ' + PORT);

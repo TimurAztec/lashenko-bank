@@ -1,4 +1,4 @@
-console.log(window.location);
+let apiurl = (window.location.host == 'localhost') ? 'http://localhost:80' : window.location.origin;
 
 if (sessionStorage.getItem('auth')) {
     if (JSON.parse(sessionStorage.getItem('auth'))['_id']) {
@@ -67,7 +67,7 @@ document.querySelector('.logo').addEventListener('click', () => {
 });
 
 document.querySelector('#login-btn').addEventListener('click', () => {
-    fetch(`${window.location.origin}/api/singin`, {method: "post",
+    fetch(`${apiurl}/api/signin`, {method: "post",
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
@@ -93,7 +93,7 @@ document.querySelector('#login-btn').addEventListener('click', () => {
 })
 
 document.querySelector('#registration-btn').addEventListener('click', () => {
-    fetch(`${window.location.origin}/api/singup`, {method: "post",
+    fetch(`${apiurl}/api/signin`, {method: "post",
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'

@@ -1,7 +1,9 @@
 function API(request, response) {
     const MongoClient = require('mongodb').MongoClient;
-    const uri = "mongodb+srv://admin:admin@bank.v5c9f.mongodb.net/bank?retryWrites=true&w=majority";
-    const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+    const url = "mongodb+srv://admin:admin@bank.v5c9f.mongodb.net/bank?retryWrites=true&w=majority";
+    const client = new MongoClient(url, { useNewUrlParser: true, useUnifiedTopology: true });
+    console.log('url', request.url.split('/')[2]);
+    console.log('method', request.method);
 
     if (request.url.split('/')[2] === 'signup' && request.method === 'POST') {
         let dataJSONString = '';
